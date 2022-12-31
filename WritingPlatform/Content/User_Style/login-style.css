@@ -1,0 +1,108 @@
+﻿.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    height: auto;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    padding: 20px;
+    padding-bottom: 5px;
+    box-shadow: 5px 5px 5px 5px rgba(50, 45, 40, 0.5);
+}
+
+/*Login Style*/
+
+.divImgLogin img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+}
+
+/*Login Part*/
+
+.divInputLogin #txtUsername, #pbPassword {
+    background-color: black;
+    color: white;
+    padding: 5px;
+    width: 600px;
+    height: 50px;
+    display: block;
+    text-align: center;
+    font-family: 'Gemunu Libre', sans-serif;
+    font-size: 24px;
+    border-radius: 10px;
+}
+
+/*Login Button Part*/
+
+.divBtnLogin #btnLogin {
+    margin-top: 50px;
+    width: 120px;
+    height: 55px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    font-family: 'Gemunu Libre', sans-serif;
+    font-size: 24px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    transition: 0.5s;
+}
+
+.divBtnLogin #btnLogin:hover {
+    background-color: white;
+    color: black;
+    transition: 0.5s;
+}
+
+/*Sign Up Part*/
+
+.divRegister {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.divRegister #lblRegister {
+    background-color: black;
+    color: white;
+    font-family: 'Gemunu Libre', sans-serif;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+a {
+    background-color: black;
+    color: darkslateblue;
+    font-family: 'Gemunu Libre', sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+a:hover {
+    color: #8f22ff;
+    font-size: 28px;
+    transition: 0.5s;
+    margin-top: 5px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+h6 {
+    color: red;
+    font-family: 'Gemunu Libre', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}

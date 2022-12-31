@@ -1,0 +1,104 @@
+﻿@using WritingPlatform.Controllers
+
+
+@{
+    ViewBag.Title = "NonUserDashboard";
+}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="~/Content/Writing_Style/NonUserDashboard.css" />
+
+<div class="head-session">
+
+    <div class="collapse navbar-collapse d-flex mt-4 justify-content-between" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 top">
+            <li class="nav-item">
+                <a><img class="btn-search" id="btn-search" src="~/Images/magnifying-glass (1).png" /></a>
+            </li>
+            <li class="nav-item">
+                <input type="text" class="form-control txt-search" id="inputPassword2" placeholder="Author, Genre">
+            </li>
+            <li class="nav-item">
+                <a href="~/Users/Login"><img id="btn-profile" src="~/Images/user-32.png" /></a>
+            </li>
+        </ul>
+
+    </div>
+
+
+
+    <div class="nav-bar">
+        <div class="collapse navbar-collapse d-flex mt-4 justify-content-between" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                <li class="nav-item">
+                    <a class="nav-link" href="">Sort By Date</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">Sort By Rating</a>
+                </li>
+            </ul>
+        </div>
+        <div class="d-flex mt-4 justify-content-between align-items-center">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0  ">
+                <li class="nav-item">
+                    <a href="~/Users/Login" class="nav-link">Log in</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0  ">
+                <li class="nav-item">
+                    <a href="~/Users/Create" class="nav-link">Register</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+<br />
+
+<div class="full-height">
+    <div class="left-side-bar">
+        <div id="arrow-up-icon">
+            <a><img src="~/Images/up-chevron.png" /></a>
+        </div>
+        <div>
+            <h1>1</h1>
+        </div>
+        <div id="arrow-down-icon">
+            <a><img src="~/Images/down-chevron.png" /></a>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="body-content">
+
+            <div class="information">
+                @foreach (var item in (List<WritingDTO>)ViewData["l_writing"])
+                {
+                    <div class="content-box">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h3 class="card-title">@item.Title</h3>
+                                <p>@item.Type</p>
+                                <p>@item.Date.ToString("dddd, dd MMMM yyyy")</p>
+                                <p>@item.Username</p>
+                                <a href="~/Writing/WritingDetailAnonymous/@item.Id" class="btn btn-primary">Detail</a>
+
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+

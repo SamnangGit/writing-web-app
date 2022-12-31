@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/Content/User_Style/login-style.css" />
+
+    <label style="font-family: 'Gemunu Libre', sans-serif; font-size:48px; display:block; text-align:center">Login</label>
+    
+    <div class="divImgLogin">
+        <img src="~/Images/user.png" />
+    </div>
+
+    <div class="divInputLogin">
+        <input type="text" id="txtUsername" name="txtUsername" placeholder="username" style="margin-top:60px" />
+        <input type="password" id="pbPassword" name="pbPassword" placeholder="password" style="margin-top:20px" />
+        @if (ViewBag.Error == "Username or password is incorrect")
+        {
+            <h6>@ViewBag.Error</h6>
+        }
+    </div>
+
+    <div class="divBtnLogin">
+        <input type="submit" value="Login" id="btnLogin"/>
+    </div>
+
+    <div class="divRegister">
+        <label id="lblRegister" for="lSignUp">New Here? => &nbsp</label>
+        @Html.ActionLink("Sign Up", "Create", "User", new {@id="linkSignUp"})
+    </div>
+
+}

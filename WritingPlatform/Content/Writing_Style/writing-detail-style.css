@@ -1,0 +1,256 @@
+﻿body{
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 10px;
+    padding-bottom: 0px;
+}
+
+html, body , .body-content{
+    height: 100%;
+    margin: 0;
+    padding-left: 0;
+}
+
+.full-height {
+    height: 88%;
+    display: flex;
+}
+
+.container{
+    margin: 0;
+    width: 100%;
+}
+
+.content-viewer {
+    width: 69%;
+}
+
+#pdf-viewer {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.rating-comment {
+    display: flex;
+    flex-direction: column;
+    width: 23%;
+    height: 100%;
+    border-radius: 15px;
+    margin-left: 15px;
+    padding: 0;
+}
+
+.left-side-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 8%;
+    height: 100%;
+    background-color: #000000;
+    border-radius: 15px;
+    margin-right: 15px;
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 30%;
+}
+
+.comment {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 70%;
+}
+
+.rating-header, .comment-header {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+.rating-header h1, .comment-header h1 {
+    width: fit-content;
+    height: 45px;
+    background-color: white;
+    border-radius: 20px;
+    font-family: 'Gemunu Libre', sans-serif;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.left-side-bar #arrow-up-icon {
+    transition: 0.5s;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.left-side-bar #arrow-up-icon:hover {
+    transition: 0.5s;
+    transform: scale(1.1);
+}
+
+.left-side-bar #arrow-down-icon {
+    transition: 0.5s;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.left-side-bar #arrow-down-icon:hover{
+    transition: 0.5s;
+    transform: scale(1.1);
+}
+
+.left-side-bar h1 {
+    font-size: 64px;
+    font-family: 'Gemunu Libre', sans-serif;
+    font-weight: bolder;
+    color: #ffffff;
+    position: relative;
+    text-align: center
+}
+
+a:hover{
+    cursor: pointer;
+}
+
+.rating-star {
+    width: 100%;
+    background-color: #000000;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+i{
+    color: yellow;
+    font-size: 40px;
+}
+
+.comment-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    border-radius: 15px;
+}
+
+.writing-content{
+    width: 95%;
+    height: 85%;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.send-btn{
+    width: 100%;
+    height: 15%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+/*.send-btn .send-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+*/
+
+
+.send-btn img{
+    transition: 0.5s;
+    width: 35px;
+    height: 35px;   
+}
+
+.send-btn .send-img #btn-send-img:hover{
+    transition: 0.5s;
+    transform: scale(1.1);
+}
+
+.profile #btn-logout{
+    margin-right: 10px;
+    margin-top: 3px;
+}
+
+.head-session #btn-profile {
+    width: 32px;
+    height: 32px;
+}
+
+.head-session{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 10%;
+    margin-bottom: 10px;
+}
+
+.nav-bar {
+    background-color: black;
+    width: 100%;
+    height: 50%;
+    margin-left: 7.5px;
+    align-items: center;
+    display: flex;
+    justify-content: end;
+    padding-right: 10px;
+}
+
+.profile {
+    width: 100%;
+    height: 40%;
+    align-items: center;
+    display: flex;
+    justify-content: end;
+}
+
+.nav-bar a {
+    font-size: 16px;
+    font-family: 'Gemunu Libre', sans-serif;
+    font-weight: bolder;
+    margin-left: 7.5px;
+    margin-right: 7.5px;
+    color: white;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.nav-bar a:hover{
+    transition: 0.5s;
+    transform: scale(1.1);
+    color: cyan;
+}
+
+#ta-comment {
+    font-size: 24px;
+    font-family: 'Gemunu Libre', sans-serif;
+    border: none;
+    max-width: -moz-available;
+    margin: 5px;
+    outline: 0;
+    text-align: justify;
+    white-space: normal;
+    padding:10px;
+}
+
+.writing-content{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+

@@ -1,0 +1,82 @@
+﻿body {
+    background-color: #2422ba;
+    width: 100%;
+    color: white;
+    position: relative;
+}
+
+i.leave {
+    float: right;
+    right: 50px;
+    font-size: 30px;
+    cursor: pointer;
+    margin-top: 10px;
+    padding-right: 30px;
+}
+
+.container {
+    width: 100%;
+    position: relative;
+}
+
+.layout {
+    width: 100%;
+    position: absolute;
+    padding: 0;
+}
+
+.layout .paper {
+        margin-top: 10px;
+        float: left;
+        width: 75%;
+        background: white;
+        height: 620px;
+        border-radius: 30px; 
+        padding: 20px;
+}
+
+.layout .detail {
+        margin-top: 10px;
+        float: right;
+        width: 22%;
+        background: black;
+        margin-right: 22px;
+        padding: 10px;
+        border-radius: 15px;
+}
+
+.layout .detail .info {
+            background: white;
+            color: black;
+            width: 100%;
+            padding: 5px;
+            border-radius: 20px;
+}
+
+h3 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 25px;
+}
+
+.dropdown-menu li a {
+    width: 100%;
+    float: left;
+}
+
+a i {
+    text-align: center;
+    font-size: 120px;
+    color: darkcyan;
+    transition: 0.5s;
+}
+
+a i:hover {
+        color: orangered;
+        cursor: pointer;
+        transform: scale(1.5);
+        transition: 0.5s;        
+}
+h1{
+    color:black;
+}

@@ -1,0 +1,104 @@
+﻿
+@{
+    ViewBag.Title = "PublishWriting";
+    Layout = "~/Views/Shared/_LayoutBootstrap5.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/Content/Writing_Style/Dashboard.css" />
+    <link rel="stylesheet" href="~/Content/Writing_Style/PublishWriting.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+
+
+    <div class="page-header">
+        <a href="~/Users/Details/@ViewBag.uid"><i class="fa-solid fa-user leave"></i></a>
+        <a href="~/Users/Login"><i class="fa-solid fa-arrow-right-from-bracket leave"></i></a>
+    </div>
+    <br /><br />
+    <div class="container">
+
+
+        <div class="row">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse d-flex mt-4 justify-content-between" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                               
+                            </ul>
+                        </div>
+
+                        <div class="d-flex mt-4 justify-content-between align-items-center">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0  ">
+                                <li class="nav-item">
+                                    <a href="~/Users/Details/@ViewBag.uid" class="nav-link">My Profile</a>
+                                </li>
+                            </ul>
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0  ">
+                                <li class="nav-item">
+                                    <a href="~/Writing/Dashboard/@ViewBag.uid" class="nav-link">My Library</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div class="layout">
+            <div class="paper">
+                <textarea id="ta-composing" rows="5" placeholder="compose here..."></textarea>
+            </div>
+            <div class="detail">
+                <div class="info">
+                    <div class="col-12">
+                        <h3><label for="validationDefault03" class="form-label">TITLE</label></h3>
+                        <input type="text" class="form-control" id="validationDefault03" required>
+                    </div>
+                    <div class="col-12">
+                        <h3><label for="validationDefault03" class="form-label">DATE</label></h3>
+                        <input type="date" class="form-control" id="validationDefault03" required>
+                    </div>
+                    <div class="col-12">
+                        <h3><label for="validationDefault03" class="form-label">GENRE</label></h3>
+                        <div class="dropdown">
+                            <button class="col-12 btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Literature
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="">Action</a></li>
+                                <li><a class="dropdown-item" href="">Another action</a></li>
+                                <li><a class="dropdown-item" href="">Something else here</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <br /><br />
+                </div>
+                <a>
+                    <i class="fa-solid fa-circle-arrow-right"></i>
+                </a>
+            </div>
+
+           
+            
+
+        </div>
+       
+        
+
+    </div>
+
+  
+}

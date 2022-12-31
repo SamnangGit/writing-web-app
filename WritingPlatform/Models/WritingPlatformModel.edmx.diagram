@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f56ce4a915be4b3db0b2ed5344b8cf86" Name="Diagram1">
+        <EntityTypeShape EntityType="WritingPlatformModel.Comment" Width="1.5" PointX="3" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="WritingPlatformModel.Genre" Width="1.5" PointX="3.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WritingPlatformModel.Rating" Width="1.5" PointX="3" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="WritingPlatformModel.sysdiagram" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WritingPlatformModel.User" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="WritingPlatformModel.Writing" Width="1.5" PointX="6" PointY="4.125" IsExpanded="true" />
+        <AssociationConnector Association="WritingPlatformModel.FK__Comments__User_i__2C3393D0" ManuallyRouted="false" />
+        <AssociationConnector Association="WritingPlatformModel.FK__Comments__Writin__2D27B809" ManuallyRouted="false" />
+        <AssociationConnector Association="WritingPlatformModel.FK__Writings__Genre___286302EC" ManuallyRouted="false" />
+        <AssociationConnector Association="WritingPlatformModel.FK__Ratings__User_id__300424B4" ManuallyRouted="false" />
+        <AssociationConnector Association="WritingPlatformModel.FK__Ratings__Writing__30F848ED" ManuallyRouted="false" />
+        <AssociationConnector Association="WritingPlatformModel.FK__Writings__User_i__29572725" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

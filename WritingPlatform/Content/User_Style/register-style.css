@@ -1,0 +1,116 @@
+﻿.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    height: auto;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    padding: 20px;
+    padding-bottom: 5px;
+    box-shadow: 5px 5px 5px 5px rgba(50, 45, 40, 0.5);
+}
+
+
+/*Register Style*/
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+/*Register Part*/
+
+#txtUsername, #pbPassword, #txtEmail, #txtRole {
+    background-color: black;
+    color: white;
+    padding: 5px;
+    width: 600px;
+    height: 50px;
+    display: block;
+    text-align: center;
+    font-family: 'Gemunu Libre', sans-serif;
+    font-size: 24px;
+    border-radius: 10px;
+}
+
+/*Register Button Part*/
+#btnCreate, #btnDelete, #btnUpdate {
+    margin-top: 40px;
+    width: 140px;
+    height: 55px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    font-family: 'Gemunu Libre', sans-serif;
+    font-size: 24px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    transition: 0.5s;
+}
+
+#btnCreate:hover, #btnDelete:hover, #btnUpdate:hover {
+    background-color: white;
+    color: black;
+    transition: 0.5s;
+}
+
+#pb-style{
+    display: flex;
+    flex-direction: row;
+}
+
+i{
+    position: relative;
+    top: 15px;
+    
+}
+
+
+a {
+    background-color: black;
+    color: darkslateblue;
+    font-family: 'Gemunu Libre', sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-top: 10px;
+    font-weight: 500;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: fit-content;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+a:hover {
+   color: #8f22ff;
+   font-size: 24px;
+   transition: 0.5s;
+   margin-top: 25px;
+   text-decoration: none;
+   font-weight: 500;
+}
+
+.btn-manage-account {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around
+}
+
+#id-btn-update #btnUpdate {
+    width: 100px;
+}
+
+#id-btn-delete #btnDelete {
+    width: 100px;
+}

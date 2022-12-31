@@ -1,0 +1,75 @@
+﻿
+@{
+    ViewBag.Title = "WritingDetail";
+}
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="~/Content/Writing_Style/writing-detail-style.css" />
+
+<div class="head-session">
+    <div class="profile">
+        <a href="~/Users/Login"><img id="btn-logout" src="~/Images/logout.png" /></a>
+        <a href="~/Users/Details/@ViewBag.uid"><img id="btn-profile" src="~/Images/man.png" /></a>
+    </div>
+
+    <div class="nav-bar">
+        <a href="~/Writing/Dashboard/@ViewBag.uid">My Library</a>
+        <a ref="~/Users/Details/@ViewBag.uid">My Profile</a>
+    </div>
+</div>
+
+
+<div class="full-height">
+    <div class="left-side-bar">
+        <div id="arrow-up-icon">
+            <a><img src="~/Images/up-chevron.png" /></a>
+        </div>
+        <div>
+            <h1>1</h1>
+        </div>
+        <div id="arrow-down-icon">
+            <a><img src="~/Images/down-chevron.png" /></a>
+        </div>
+    </div>
+
+    <div class="content-viewer">
+        <iframe id="pdf-viewer" src="@ViewBag.content" frameborder="1" scrolling="auto"></iframe>
+    </div>
+
+    <div class="rating-comment">
+        <div class="rating">
+            <div class="rating-header">
+                <h1>Rating</h1>
+            </div>
+            <div class="rating-star">
+                <a><i class="fa-solid fa-star"></i></a>
+                <a><i class="fa-solid fa-star"></i></a>
+                <a><i class="fa-solid fa-star"></i></a>
+                <a><i class="fa-solid fa-star"></i></a>
+                <a><i class="fa-solid fa-star"></i></a>
+            </div>
+        </div>
+        <div class="comment">
+            <div class="comment-header">
+                <h1>Comment</h1>
+            </div>
+            <div class="comment-content">
+                <div class="writing-content">
+                    <textarea id="ta-comment" rows="5" maxlength="450" placeholder="enter your comment here..."></textarea>
+                </div>
+                <div class="send-btn">
+                    <div class="send-img">
+                        <a><img id="btn-send-img" src="~/Images/send.png" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

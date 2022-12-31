@@ -1,0 +1,138 @@
+﻿@using WritingPlatform.Controllers
+
+@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_LayoutBootstrap5.cshtml";
+}
+
+<h2>Dashboard</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/Content/Writing_Style/Dashboard.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+    <hr />
+    <div class="page-header">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            ADD
+        </button>
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                    </div>
+                    <div class="modal-body">
+                        <input name="btn" type="submit" class="btn btn-primary  btn-lg" value="Upload"/>
+                        <input name="btn" type="submit" class="btn btn-secondary btn-lg" value="Compose"/>
+                    </div>
+                    @*<div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">close</button>
+                            <button type="button" class="btn btn-primary">understood</button>
+                        </div>*@
+                </div>
+            </div>
+        </div>
+        <i class="fa-solid fa-user leave"></i>
+        <i class="fa-solid fa-arrow-right-from-bracket leave"></i>
+    </div>
+    <br />
+    <div class="container">
+
+
+        <div class="row">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse d-flex mt-4 justify-content-between" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="">Sort By ID</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="">Sort By Rating</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="">Sort By Genre</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="d-flex mt-4 justify-content-between align-items-center">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0  ">
+                                <li class="nav-item">
+                                    <a class="nav-link">My Profile</a>
+                                </li>
+                            </ul>
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0  ">
+                                <li class="nav-item">
+                                    <a class="nav-link">My Library</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <br />
+        <div class="body-content">
+            <div class="side-bar">
+                <li class="btn-next">
+                    <a>
+                        <i class="fa-solid fa-angles-up"></i>
+                    </a><br /><br />
+                    <h1> 1 </h1><br />
+                    <a>
+                        <i class="fa-solid fa-angles-down"></i>
+                    </a>
+                </li>
+
+
+            </div>
+
+            <div class="information">
+                @foreach (var item in (List<WritingDTO>)ViewData["l_writing"])
+                {
+                    <div class="content-box">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h3 class="card-title">@item.Title</h3>
+                                <p>@item.Type</p>
+                                <p>@item.Date.ToString("dddd, dd MMMM yyyy")</p>
+                                <p>@item.Username</p>
+                                <a href="~/Writing/WritingDetail/@item.Id" class="btn btn-primary">Detail</a>
+
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+
+}
+
+@section Scripts {
+
+    <script type="text/javascript" src="~/Scripts/Writing_Script/Dashboard.js"></script>
+    @Scripts.Render("~/bundles/jqueryval")
+}
